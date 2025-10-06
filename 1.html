@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hábitos Saludables</title>
+  <!-- Archivo de estilos externo -->
+  <link rel="stylesheet" href="2.css">
+</head>
+<body>
+
+  <!-- ==================== ENCABEZADO ==================== -->
+  <header>
+    <h1>💧 Hábitos Saludables</h1>
+    <!-- Archivo de audio que sonará como alarma -->
+    <audio id="alarmSound" src="alarma.mp3" preload="auto"></audio>
+  </header>
+
+
+  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+  <main>
+
+    <!-- Reloj principal -->
+    <section class="card clock-card">
+      <div id="clock">--:--:--</div>
+      <div class="form" style="justify-content:center; margin-top:10px;">
+        <input type="time" id="manualClock">
+        <button id="setClockBtn">Cambiar hora</button>
+      </div>
+    </section>
+
+    <!-- Formulario para agregar un nuevo hábito -->
+    <section class="card">
+      <h2>Agregar hábito</h2>
+      <div class="form">
+        <input type="text" id="habitName" placeholder="Ej: Beber agua">
+        <input type="time" id="habitTime">
+        <label>
+          <input type="checkbox" id="habitRepeat">
+          Repetir todos los días
+        </label>
+        <button id="addHabitBtn">Agregar</button>
+      </div>
+    </section>
+
+    <!-- Lista de hábitos programados -->
+    <section class="card">
+      <h2>Mis hábitos</h2>
+      <div id="habitList" class="list"></div>
+    </section>
+
+    <!-- Historial de hábitos cumplidos y no cumplidos -->
+    <section class="card">
+      <h2>Historial</h2>
+      <!-- Filtro para mostrar todos / cumplidos / no cumplidos -->
+      <div style="margin-bottom:10px;">
+        <select id="filterHistory">
+          <option value="all">Todos</option>
+          <option value="done">Cumplidos</option>
+          <option value="fail">No cumplidos</option>
+        </select>
+      </div>
+      <div id="activityList" class="list"></div>
+    </section>
+
+  </main>
+
+
+  <!-- ==================== MODAL DE MENSAJES ==================== -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+      <div class="modal-buttons" id="modalButtons"></div>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCRIPT PRINCIPAL ==================== -->
+  <script src="3.js"></script>
+
+</body>
+</html>
