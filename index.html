@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perdóname mi Brey HG ❤️</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fondo y corazones -->
+  <div id="hearts-container" aria-hidden="true"></div>
+
+  <!-- Contenedor principal -->
+  <main class="card" role="main">
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><text x='0' y='50' font-size='40'>❤️</text></svg>"
+         alt="" class="avatar" />
+
+    <h1 id="title">Amor, necesito decirte algo...</h1>
+
+    <p id="typed" class="typed"></p>
+
+    <div class="controls">
+      <button id="playTextBtn" class="btn">Leer carta ✍️</button>
+      <button id="forgiveBtn" class="btn primary">¿Me perdonas? 🥺</button>
+      <button id="musicToggle" class="btn">Tocar música 🎵</button>
+    </div>
+
+    <div id="result" class="result hidden" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- Audio: coloca un archivo llamado "music.mp3" en la misma carpeta para que suene.
+       Si no lo quieres, borra o comenta la siguiente línea -->
+  <audio id="bgMusic" src="music.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
